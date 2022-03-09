@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Week2.GestioneAlbergo
 {
-    internal class GestoreAlbergo
+    internal static class GestoreAlbergo
     {
         public static bool Menu(string[] camere)
         {

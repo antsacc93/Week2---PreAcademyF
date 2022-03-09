@@ -39,7 +39,11 @@ namespace Week2.Demo
             }
             return risultato;
         }
-
+        /// <summary>
+        /// Calcolo di Fibonacci ricorsivo
+        /// </summary>
+        /// <param name="n">n è il numero della serie da calcolare</param>
+        /// <returns>Ritorna l'n-esino numero della serie di Fibonacci</returns>
         public static int FibonacciRicorsivo(int n)
         {
             if(n == 0)

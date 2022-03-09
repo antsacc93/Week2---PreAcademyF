@@ -30,7 +30,12 @@
       "ProjectGuid": "8c90d52b-9f8b-40cf-a28c-7348c80f1524",
       "DisplayName": "Week2.GestioneCopisteria",
       "ColorIndex": 4
+    },
+    "c4a7fe65-8cdb-41c7-90d6-c56be50c0cd0": {
+      "ProjectGuid": "c4a7fe65-8cdb-41c7-90d6-c56be50c0cd0",
+      "DisplayName": "Week2.GestioneAlbergo",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 6
 }

@@ -24,10 +24,10 @@ namespace Week2.Demo
             ////Console.WriteLine($"Il valore richiesto è: {risultatoIterativo}");
             ////int risultatoRicorsivo = Fibonacci.FibonacciRicorsivo(5);
             ////Console.WriteLine($"Il valore ottenuto con la ricorsione è: {risultatoRicorsivo}");
-             
+
             //Stopwatch watch = new Stopwatch();
             //watch.Start(); //faccio partire il cronometro
-            //for(int i = 0; i < 50; i++)
+            //for (int i = 0; i < 50; i++)
             //{
             //    Console.WriteLine($"Numero {i} della serie di " +
             //        $"Fibonacci Iterativo: {Fibonacci.FibonacciIterativo(i)} ");
@@ -37,7 +37,7 @@ namespace Week2.Demo
 
             //Stopwatch watchRicorsivo = new Stopwatch();
             //watchRicorsivo.Start();
-            //for(int i = 0; i < 50; i++)
+            //for (int i = 0; i < 50; i++)
             //{
             //    Console.WriteLine($"Numero {i} della serie di " +
             //        $"Fibonacci Ricorsivo: {Fibonacci.FibonacciRicorsivo(i)}");
@@ -47,64 +47,104 @@ namespace Week2.Demo
             #endregion
 
             #region ARRAY E ARRAYLIST
-            int[] array = new int[50];// { 1, 2, 3};
-            //0 ... N-1
-            array[0] = 10;
-            array[49] = 100;
-            //Errore semantico ma non sintattico
-            //array[50] = 200;
-            //Console.WriteLine(array[50]);
+            //int[] array = new int[50];// { 1, 2, 3};
+            //int[] array2 = new int[] { 1, 2, 3 };
+            ////0 ... N-1
+            //array[0] = 10;
+            //array[49] = 100;
+            ////Errore semantico ma non sintattico
+            ////array[50] = 200;
+            ////Console.WriteLine(array[50]);
 
-            double[] arrayDiDouble = new double[] { 1.3, 2.3, 5.6 };
-            for(int i = 0; i < arrayDiDouble.Length; i++)
+            //double[] arrayDiDouble = new double[] { 1.3, 2.3, 5.6 };
+            //for(int i = 0; i < arrayDiDouble.Length; i++)
+            //{
+            //    Console.WriteLine(arrayDiDouble[i]);
+            //}
+
+            //int indicePrimoValore = Array.IndexOf(arrayDiDouble, 5.6);
+            //Console.WriteLine("Il valore 5.6 si trova in posizione {0}", indicePrimoValore);
+
+            //int[] arrayVuoto = new int[] { };
+            //if(arrayVuoto.Length == 0)
+            //{
+            //    Console.WriteLine("Questo array è vuoto");
+            //}
+
+            //string nome = "Antonia";
+            //Console.WriteLine(nome[0]);
+            //int lunghezza = nome.Length;
+            //nome = "Antonia Sacchitella";
+            //foreach(double value in arrayDiDouble)
+            //{
+            //    Console.WriteLine(value);
+            //}
+            //Array.Resize(ref arrayDiDouble, 20);
+            //Console.WriteLine(arrayDiDouble.Length);
+
+            ////Dichiarazione ArrayList
+            //ArrayList esempio = new ArrayList(); //Lista vuota 
+            //ArrayList esempioMisto = new ArrayList() { 1, "ciao", 4.5, true };
+            //Console.WriteLine(esempioMisto[0]);
+            //esempioMisto.Add(new DateTime());
+            //esempioMisto.Add(45); //aggiunta in coda di un elemento
+            //for(int i = 0; i < esempioMisto.Count; i++)
+            //{
+            //    Console.WriteLine("Elemento in posizione {0}: {1}", i, esempioMisto[i]);
+            //}
+            //foreach(var value in esempioMisto)
+            //{
+            //    Console.WriteLine(value);
+            //}
+            //esempioMisto.RemoveAt(0); //rimozione elemento in prima posizione
+            //esempioMisto.RemoveAt(esempioMisto.Count - 1); //rimozione in ultima posizione
+            //esempioMisto.AddRange(arrayDiDouble); //inserimento massivo dell'array
+            //esempioMisto.RemoveRange(0, 3);
+            //esempioMisto.Add(true);
+            //esempioMisto.Remove(true);
+            //Console.WriteLine("Stampa dopo una serie di modifiche");
+            //foreach (var value in esempioMisto)
+            //{
+            //    Console.WriteLine(value);
+            //}
+            #endregion
+
+            #region CLASSI E OGGETTI
+            //Istanzio oggetto di tipo persona
+            Persona persona = new Persona();
+            
+            persona.Nome = "Mario"; //uso il set per settare _nome
+            persona.DataNascita = new DateTime(1980, 1, 1);
+            Console.WriteLine($"Nome: {persona.Nome} - Età: {persona.Eta}");
+
+            persona.Password = "12345";
+            // Console.WriteLine("La tua password è {0}", persona.Password);
+            // non è possibile eseguire questa operazione perchè write only
+            Console.Write("Inserisci password: ");
+            string password = Console.ReadLine();
+            if (persona.ValidaPassword(password))
             {
-                Console.WriteLine(arrayDiDouble[i]);
+                Console.WriteLine("Password corretta");
+            }
+            else
+            {
+                Console.WriteLine("Password errata");
             }
 
-            int indicePrimoValore = Array.IndexOf(arrayDiDouble, 5.6);
-            Console.WriteLine("Il valore 5.6 si trova in posizione {0}", indicePrimoValore);
+            Persona p = new Persona();
+            Console.WriteLine(p.Nome);
+            Console.WriteLine(p.DataNascita);
+            p.Nome = "Marco";
+            Console.WriteLine(p.Nome);
 
-            int[] arrayVuoto = new int[] { };
-            if(arrayVuoto.Length == 0)
+            Persona personaNonDefault = new Persona()
             {
-                Console.WriteLine("Questo array è vuoto");
-            }
+                Nome = "Antonia",
+                DataNascita = new DateTime(1993, 3, 2),
+                Password = "ppppp",
+            };
 
-            string nome = "Antonia";
-            Console.WriteLine(nome[0]);
-            int lunghezza = nome.Length;
-            nome = "Antonia Sacchitella";
-            foreach(double value in arrayDiDouble)
-            {
-                Console.WriteLine(value);
-            }
-            Array.Resize(ref arrayDiDouble, 20);
-            Console.WriteLine(arrayDiDouble.Length);
-
-            //Dichiarazione ArrayList
-            ArrayList esempio = new ArrayList(); //Lista vuota 
-            ArrayList esempioMisto = new ArrayList() { 1, "ciao", 4.5, true };
-            Console.WriteLine(esempioMisto[0]);
-            esempioMisto.Add(45); //aggiunta in coda di un elemento
-            for(int i = 0; i < esempioMisto.Count; i++)
-            {
-                Console.WriteLine("Elemento in posizione {0}: {1}", i, esempioMisto[i]);
-            }
-            foreach(var value in esempioMisto)
-            {
-                Console.WriteLine(value);
-            }
-            esempioMisto.RemoveAt(0); //rimozione elemento in prima posizione
-            esempioMisto.RemoveAt(esempioMisto.Count - 1); //rimozione in ultima posizione
-            esempioMisto.AddRange(arrayDiDouble); //inserimento massivo dell'array
-            esempioMisto.RemoveRange(0, 3);
-            esempioMisto.Add(true);
-            esempioMisto.Remove(true);
-            Console.WriteLine("Stampa dopo una serie di modifiche");
-            foreach (var value in esempioMisto)
-            {
-                Console.WriteLine(value);
-            }
+            Console.WriteLine(Persona.Codice);
             #endregion
 
         }
