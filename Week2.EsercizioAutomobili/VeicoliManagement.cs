@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using Week2.EsercizioAutomobili.Entities;
@@ -13,7 +14,7 @@ namespace Week2.EsercizioAutomobili
 
             bool success;
             Console.WriteLine("Inserisci marca");
-            veicolo.Marca = Console.ReadLine();
+            veicolo.Targa = Console.ReadLine();
             Console.WriteLine("Inserisci i Kilowatt");
             veicolo.Kilowatt = VerificaInputIntero();
             Console.WriteLine("Inserisci anno di immatricolazione");
@@ -47,6 +48,45 @@ namespace Week2.EsercizioAutomobili
         public static void StampaVeicolo(Veicolo veicolo)
         {
             Console.WriteLine(veicolo);
+        }
+
+        public static void StampaVeicoli(ArrayList veicoli)
+        {
+            foreach(Veicolo veicolo in veicoli)
+            {
+                StampaVeicolo(veicolo);
+            }
+        }
+
+        public static void EliminaVeicolo(ArrayList veicoli)
+        {
+            //Cerco il veciolo da eliminare scrivendo la targa
+            Veicolo veicoloDaCancellare = CercaVeicolo(veicoli);
+            if(veicoloDaCancellare != null)
+            {
+                veicoli.Remove(veicoloDaCancellare);
+                Console.WriteLine("Cancellazione avvenuta con successo");
+            } else
+            {
+                Console.WriteLine("Veicolo non trovato");
+            }
+        }
+
+        public static Veicolo CercaVeicolo(ArrayList veicoli)
+        {
+            Console.Write("Inserisci targa: ");
+            string targa = Console.ReadLine(); 
+            
+            foreach(Veicolo veicolo in veicoli)
+            {
+                //if(veicolo.Targa == targa)
+                if (veicolo.Targa.Equals(targa))
+                {
+                    return veicolo; //non appena verifico quel veicolo con la targa lo restituisco
+                }
+
+            }
+            return null;
         }
     }
 }

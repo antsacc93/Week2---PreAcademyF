@@ -111,41 +111,72 @@ namespace Week2.Demo
 
             #region CLASSI E OGGETTI
             //Istanzio oggetto di tipo persona
-            Persona persona = new Persona();
-            
-            persona.Nome = "Mario"; //uso il set per settare _nome
-            persona.DataNascita = new DateTime(1980, 1, 1);
-            Console.WriteLine($"Nome: {persona.Nome} - Età: {persona.Eta}");
+            //Persona persona = new Persona();
 
-            persona.Password = "12345";
-            // Console.WriteLine("La tua password è {0}", persona.Password);
-            // non è possibile eseguire questa operazione perchè write only
-            Console.Write("Inserisci password: ");
-            string password = Console.ReadLine();
-            if (persona.ValidaPassword(password))
-            {
-                Console.WriteLine("Password corretta");
-            }
-            else
-            {
-                Console.WriteLine("Password errata");
-            }
+            //persona.Nome = "Mario"; //uso il set per settare _nome
+            //persona.DataNascita = new DateTime(1980, 1, 1);
+            //Console.WriteLine($"Nome: {persona.Nome} - Età: {persona.Eta}");
 
-            Persona p = new Persona();
-            Console.WriteLine(p.Nome);
-            Console.WriteLine(p.DataNascita);
-            p.Nome = "Marco";
-            Console.WriteLine(p.Nome);
+            //persona.Password = "12345";
+            //// Console.WriteLine("La tua password è {0}", persona.Password);
+            //// non è possibile eseguire questa operazione perchè write only
+            //Console.Write("Inserisci password: ");
+            //string password = Console.ReadLine();
+            //if (persona.ValidaPassword(password))
+            //{
+            //    Console.WriteLine("Password corretta");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Password errata");
+            //}
 
-            Persona personaNonDefault = new Persona()
-            {
-                Nome = "Antonia",
-                DataNascita = new DateTime(1993, 3, 2),
-                Password = "ppppp",
-            };
+            //Persona p = new Persona();
+            //Console.WriteLine(p.Nome);
+            //Console.WriteLine(p.DataNascita);
+            //p.Nome = "Marco";
+            //Console.WriteLine(p.Nome);
 
-            Console.WriteLine(Persona.Codice);
+            //Persona personaNonDefault = new Persona()
+            //{
+            //    Nome = "Antonia",
+            //    DataNascita = new DateTime(1993, 3, 2),
+            //    Password = "ppppp",
+            //};
+
+            //Console.WriteLine(Persona.Codice);
             #endregion
+
+            #region GESTIONE INPUT/OUTPUT
+            ArrayList persone = new ArrayList();
+            Persona persona1 = new Persona()
+            {
+                Nome = "Mario Rossi",
+                DataNascita = new DateTime(1988, 2, 5),
+                Password = "12345"
+            };
+            Persona persona2 = new Persona()
+            {
+                Nome = "Luca Bianchi",
+                DataNascita = new DateTime(1955, 3, 4),
+                Password = "5678"
+            };
+            persone.Add(persona1);
+            persone.Add(persona2);
+
+            GestioneIO.StampaPersoneSuFile(persone);
+
+            persone = GestioneIO.CaricaPersoneDaFile();
+
+            foreach(Persona persona in persone)
+            {
+                Console.WriteLine(persona);
+            }
+
+            
+            
+            #endregion
+
 
         }
 

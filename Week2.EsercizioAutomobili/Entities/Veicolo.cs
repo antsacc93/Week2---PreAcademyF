@@ -6,7 +6,7 @@ namespace Week2.EsercizioAutomobili.Entities
 {
     internal class Veicolo
     {
-        public String Marca { get; set; }
+        public String Targa { get; set; }
         public int Kilowatt { get; set; }
         public int AnnoImmatricolazione { get; set; }
 
@@ -65,7 +65,7 @@ namespace Week2.EsercizioAutomobili.Entities
 
         public override string ToString()
         {
-            return $"Marca: {Marca} - Anno immatricolazione: {AnnoImmatricolazione} \n" +
+            return $"Targa: {Targa} - Anno immatricolazione: {AnnoImmatricolazione} \n" +
                 $"Kilowatt: {Kilowatt} - Tipo Euro: {Tipologia} \n" +
                 $"Prezzo Acquisto: {PrezzoAcquisto} euro - Bollo: {Bollo} euro";
         }

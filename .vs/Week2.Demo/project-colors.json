@@ -35,7 +35,17 @@
       "ProjectGuid": "c4a7fe65-8cdb-41c7-90d6-c56be50c0cd0",
       "DisplayName": "Week2.GestioneAlbergo",
       "ColorIndex": 5
+    },
+    "25d8cc92-ae9c-4f51-9dc4-1162c696be48": {
+      "ProjectGuid": "25d8cc92-ae9c-4f51-9dc4-1162c696be48",
+      "DisplayName": "Week2.Demo.Bollette",
+      "ColorIndex": 6
+    },
+    "2e80180a-fb78-4cfb-b6af-dfc7901e11fa": {
+      "ProjectGuid": "2e80180a-fb78-4cfb-b6af-dfc7901e11fa",
+      "DisplayName": "Week2.EsercizioAutomobili",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 8
 }

@@ -54,5 +54,10 @@ namespace Week2.Demo
                 return "Ceto medio";
             }
         }
+
+        public override string ToString()
+        {
+            return $"Nome: {Nome} - Data di nascita: {DataNascita.ToShortDateString()}";
+        }
     }
 }
