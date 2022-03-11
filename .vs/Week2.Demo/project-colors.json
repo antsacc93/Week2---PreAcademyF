@@ -45,7 +45,17 @@
       "ProjectGuid": "2e80180a-fb78-4cfb-b6af-dfc7901e11fa",
       "DisplayName": "Week2.EsercizioAutomobili",
       "ColorIndex": 7
+    },
+    "4b993a09-c1bf-4be1-b9d3-aefcbd97fa12": {
+      "ProjectGuid": "4b993a09-c1bf-4be1-b9d3-aefcbd97fa12",
+      "DisplayName": "GestioneAuto",
+      "ColorIndex": 8
+    },
+    "1562a64b-48c1-4568-843f-c7dc948e0cc9": {
+      "ProjectGuid": "1562a64b-48c1-4568-843f-c7dc948e0cc9",
+      "DisplayName": "Week2.EsercitazioneFinale",
+      "ColorIndex": 9
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 10
 }

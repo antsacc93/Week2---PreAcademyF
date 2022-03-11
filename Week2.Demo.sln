@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week2.GestioneCopisteria", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week2.GestioneAlbergo", "Week2.GestioneAlbergo\Week2.GestioneAlbergo.csproj", "{C4A7FE65-8CDB-41C7-90D6-C56BE50C0CD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2.Demo.Bollette", "Week2.Demo.Bollette\Week2.Demo.Bollette.csproj", "{25D8CC92-AE9C-4F51-9DC4-1162C696BE48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week2.Demo.Bollette", "Week2.Demo.Bollette\Week2.Demo.Bollette.csproj", "{25D8CC92-AE9C-4F51-9DC4-1162C696BE48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2.EsercizioAutomobili", "Week2.EsercizioAutomobili\Week2.EsercizioAutomobili.csproj", "{2E80180A-FB78-4CFB-B6AF-DFC7901E11FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week2.EsercizioAutomobili", "Week2.EsercizioAutomobili\Week2.EsercizioAutomobili.csproj", "{2E80180A-FB78-4CFB-B6AF-DFC7901E11FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2.EsercitazioneFinale", "Week2.EsercitazioneFinale\Week2.EsercitazioneFinale.csproj", "{1562A64B-48C1-4568-843F-C7DC948E0CC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{2E80180A-FB78-4CFB-B6AF-DFC7901E11FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E80180A-FB78-4CFB-B6AF-DFC7901E11FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E80180A-FB78-4CFB-B6AF-DFC7901E11FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1562A64B-48C1-4568-843F-C7DC948E0CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1562A64B-48C1-4568-843F-C7DC948E0CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1562A64B-48C1-4568-843F-C7DC948E0CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1562A64B-48C1-4568-843F-C7DC948E0CC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
